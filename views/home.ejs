@@ -1,0 +1,12 @@
+<%- include('nav')%>
+<div class=" d-flex justify-content-center align-items-center " style="height: 100%;">
+<div class="mt-5" >
+    <% if (users.length === 0) { %>
+        <h1 class="text-center">No todos yet😴</h1>
+    <% } else { %>
+        <h1>You have todos for the day in todo list 💪😃</h1>
+    <% } %>
+    
+        <form action="/go-add" method="post"><button  class="btn btn-success " style=" margin-top: 20px;" type="submit" > Add Todo</button></form>
+    </div>
+</div>

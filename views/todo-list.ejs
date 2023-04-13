@@ -1,0 +1,31 @@
+<%- include('nav')%>
+
+<div class="container">
+    <h1 class="mx-auto text-center mt-5";">Your Todo list</h1>
+</div>
+<%for(let i =0; i<users.length; i++){%>
+    <div class="card mb-3 mx-auto mt-5 " style="width: 50%;">
+        <div class="card-body ">
+            
+            <div class="" style="gap:20px">
+                <div class="d-flex align-items-center justify-content-between">
+
+                    <p class="fs-5 fw-bold text-capitalize"><%= users[i].title %></p>
+                    <p class="fs-6 fw-bold" style="color:rgb(91, 91, 91)"><%= users[i].date.toLocaleString('en-US', { dateStyle: 'long', timeStyle: 'short' }) %></p>
+                </div>
+              
+                <p class="text-capitalize" style="box-sizing: border-box; max-width: 100%" ><%= users[i].description %></p>
+               
+              </div>
+            <div class="d-flex " style="gap:20px;">
+<form action="/delete" method="post"><input type="hidden" name="description" value="<%= users[i].description,%>"><button type="submit" class="btn btn-outline-danger">Delete</button></form>
+<form action="/edit" method="post"><input type="hidden" name="description" value="<%= users[i].description,%>"><button type='submit' class="btn btn-outline-primary">Edit</button></form>          
+</div>
+         
+        </div>
+
+       
+                
+    </div>
+</div>
+<%}%> 

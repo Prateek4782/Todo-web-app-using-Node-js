@@ -1,0 +1,14 @@
+<%- include('nav')%>
+<div class="container mt-5" style="width: 50%;">
+<form action="/add-todo" method="post">
+<div class="mb-3 ">
+    <label for="exampleFormControlInput1" class="form-label">Title</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="title" placeholder="Go to market">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label" >Description</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Add a Description" name="description" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Add a Todo</button>
+</form>
+</div>

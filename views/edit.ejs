@@ -1,0 +1,16 @@
+<%- include('nav')%>
+<div class="container mt-5" style="width: 50%;">
+    <h1 class="mb-5">Update Your Todo ⚒️</h1>
+  <form action="/update-user" method="post">
+    <input type="hidden" name="oldDescription" value="<%= users.description %>">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Title</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="title" value="<%= users.title %>">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label" >Description</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="3"><%= users.description %></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Update the Todo</button>
+  </form>
+</div>
